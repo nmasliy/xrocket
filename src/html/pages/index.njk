@@ -14,19 +14,28 @@
 {% endblock content %}
 {% block scripts2 %}
 <script type="module">
-  import { Application } from './runtime.js';
-  const img = document.querySelector('.hero__img');
-  window.addEventListener('load', function (e) {
+  window.addEventListener('load', async function () {
+    const img = document.querySelector('.hero__img');
     const canvas = document.getElementById('hero-canvas');
-    const app = new Application(canvas);
 
-    app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode')
-      .then(() => {
-        img.classList.add('is-animate');
-        setTimeout(() => {
-          img.style.display = 'none';
-        }, 200)
-      });
-  })
+    try {
+      const { Application } = await import('./runtime.js');
+
+      const app = new Application(canvas);
+
+      app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode')
+        .then(() => {
+          img.classList.add('is-animate');
+          setTimeout(() => {
+            img.style.display = 'none';
+          }, 200);
+        })
+        .catch(error => {
+          console.error('Error loading the spline scene:', error);
+        });
+    } catch (error) {
+      console.error('Error importing the Spline module:', error);
+    }
+  });
 </script>
 {% endblock scripts2 %}
