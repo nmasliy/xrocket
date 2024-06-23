@@ -13,6 +13,10 @@
   max-width: var(--container-width);
 }
 
+.title {
+  text-align: center;
+}
+
 .title,
 .title-secondary {
   font-family: $second-family;
