@@ -1,0 +1,192 @@
+.benefits {
+  background: var(--background-default-secondary);
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin: 0 auto 50px;
+    max-width: 804px;
+    text-align: center;
+  }
+
+  &__row {
+    @include mb(48px);
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 100px;
+
+    &:nth-child(even) .benefits__info {
+      order: -1;
+    }
+  }
+
+  &__img {
+    grid-column: span 5;
+
+    img {
+      border-radius: 32px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    grid-column: span 6;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    @include mb(40px);
+  }
+
+  &__item-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-right: 12px;
+
+    path {
+      stroke: var(--icon-colors-default-primary);
+    }
+  }
+
+  &__name {
+    font-family: $second-family;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--label-colors-default-primary);
+  }
+}
+
+@media (max-width: 984px) {
+  .benefits {
+    &__item {
+      @include mb(32px);
+    }
+
+    &__row {
+      @include mb(40px);
+
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+
+      &:nth-child(even) {
+        .benefits__info {
+          padding-right: 40px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 32px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__info {
+      padding-left: 40px;
+    }
+
+    &__img,
+    &__info {
+      grid-column: span 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    padding-top: 36px;
+    padding-bottom: 48px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__item {
+      @include mb(20px);
+    }
+
+    &__text {
+      margin-bottom: 36px;
+    }
+
+    &__row {
+      @include mb(36px);
+
+      &:nth-child(even) {
+        .benefits__info {
+          padding-right: 24px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+
+    &__img img {
+      border-radius: 24px;
+    }
+
+    &__info {
+      padding-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits {
+    &__subtitle {
+      margin-bottom: 28px;
+      font-size: 20px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__item-head {
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      @include mb(28px);
+    }
+
+    &__row {
+      display: block;
+
+      &:nth-child(even) {
+        .benefits__info {
+          padding: 0;
+        }
+      }
+    }
+
+    &__img {
+      margin-bottom: 28px;
+    }
+
+    &__info {
+      padding: 0;
+    }
+  }
+}

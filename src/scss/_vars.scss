@@ -1,0 +1,51 @@
+// root
+:root {
+  --content-width: 1200px;
+  --container-offset: 24px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+  --window-height: 97vh;
+  --header-height: 50px;
+
+  // colors
+  --accent-primary: #3f8ae0;
+  --accent-white: #fff;
+  --background-default-primary: #fff;
+  --background-default-secondary: #f6f6f6;
+  --background-default-tertiary: #eef4fc;
+  --button-overlay-background-default: #fff;
+  --button-overlay-background-hover: #f5f4ff;
+  --button-overlay-foreground-default: #50a7ea;
+  --button-primary-background-default: #50a7ea;
+  --button-primary-background-hover: #3ba7fb;
+  --button-primary-foreground-default: #fff;
+  --icon-colors-default-accent: #3f8ae0;
+  --icon-colors-default-primary: #1b1b1b;
+  --icon-colors-default-secondary: #bfcbd8;
+  --label-colors-default-accent: #50a7ea;
+  --label-colors-default-light-accent: #d8d8e1;
+  --label-colors-default-primary: #1c1c1c;
+  --label-colors-default-red: #e73b3b;
+  --label-colors-default-green: #36b843;
+  --label-colors-default-secondary: #818c99;
+  --label-colors-default-tertiary: #adadad;
+  --label-colors-overlay-primary: #fff;
+  --label-colors-overlay-secondary: #727474;
+  --separator-gray: #d8d8e1;
+  --separator-light-gray: #f0f0f0;
+}
+
+// font
+$font-family: "Lato", sans-serif;
+$second-family: "Rubik", sans-serif;
+
+// transitions
+$transition: 0.25s ease-in-out;
+$animation-transition: 1s cubic-bezier(0.45, 0.205, 0.175, 0.85);
+$menu-transition: 0.35s ease-in-out;
+$menu-breakpoint: 768px;
+
+@media (max-width: $menu-breakpoint) {
+  :root {
+    --container-offset: 16px;
+  }
+}

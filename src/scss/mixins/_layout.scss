@@ -1,0 +1,27 @@
+@mixin blockOuterContainer($box-width: 500px, $offset: 30px) {
+  display: flex;
+  padding-left: max(15px, calc((100% - $container-width) / 2)); // outer right
+
+  > *:first-child {
+    flex-shrink: 0;
+    margin-right: $offset;
+    width: $box-width;
+  }
+
+  > *:nth-child(2) {
+    width: calc(100% - $box-width - $offset);
+  }
+}
+
+@mixin footerToBottom {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+@mixin grid($columns: 3, $gap: 30px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}

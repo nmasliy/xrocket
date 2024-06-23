@@ -1,0 +1,115 @@
+.btn {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 16px 36px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  color: var(--button-primary-foreground-default);
+  background: var(--button-primary-background-default);
+  transition: background-color $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    background-color: var(--button-primary-background-hover);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @include hover {
+    background-color: var(--button-primary-background-hover);
+  }
+}
+
+.btn-overlay {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 16px 36px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  color: var(--button-overlay-foreground-default);
+  background: var(--button-overlay-background-default);
+  transition: background-color $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    background-color: var(--button-overlay-background-hover);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @include hover {
+    background-color: var(--button-overlay-background-hover);
+  }
+}
+
+.btn-transparent {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 16px 36px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  color: var(--label-colors-overlay-secondary);
+  transition: $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    color: var(--label-colors-default-tertiary);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @include hover {
+    color: var(--label-colors-default-tertiary);
+  }
+}
+
+.btn-close {
+  display: block;
+  outline: transparent;
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L19 19' stroke='%23F5FDFE' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 1L1 19' stroke='%23F5FDFE' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") center / cover no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btn,
+  .btn-transparent {
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn,
+  .btn-transparent {
+    padding: 16px 22px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}

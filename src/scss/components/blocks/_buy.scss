@@ -1,0 +1,98 @@
+.dark-theme {
+  .buy__wrapper {
+    background-image: url("../img/buy-bg-dark-theme.png");
+  }
+}
+
+.buy {
+  &__wrapper {
+    @include bg-cover;
+
+    background-image: url("../img/buy-bg.png");
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: 48px 0;
+    max-width: 660px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: var(--label-colors-overlay-primary);
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    color: var(--label-colors-overlay-secondary);
+  }
+
+  &__img {
+    max-width: 360px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .buy {
+    &__img {
+      max-width: 252px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .buy {
+    &__content {
+      position: relative;
+      z-index: 2;
+      padding: 70px 0 100px;
+    }
+
+    &__img {
+      position: absolute;
+      right: -16px;
+      bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .buy {
+    &__btn {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .buy {
+    &__wrapper {
+      padding: 50px 0 20px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__content {
+      margin-bottom: 25px;
+      padding: 0;
+    }
+
+    &__img {
+      position: static;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}

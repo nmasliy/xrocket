@@ -1,0 +1,60 @@
+/* stylelint-disable */
+@mixin to-4k {
+  @media (max-width: (3840px)) {
+    @content;
+  }
+}
+
+@mixin to-2k {
+  @media (max-width: (2560px)) {
+    @content;
+  }
+}
+
+@mixin to-full-hd {
+  @media (max-width: (1920px)) {
+    @content;
+  }
+}
+
+@mixin to-laptop {
+  @media (max-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin to-laptop-sm {
+  @media (max-width: (1280px)) {
+    @content;
+  }
+}
+
+@mixin to-tablet {
+  @media (max-width: (1024px)) {
+    @content;
+  }
+}
+
+@mixin to-tablet-sm {
+  @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin to-tablet-xs {
+  @media (max-width: (576px)) {
+    @content;
+  }
+}
+
+@mixin to-mobile-lg {
+  @media (max-width: (425px)) {
+    @content;
+  }
+}
+
+@mixin to-mobile-sm {
+  @media (max-width: (375px)) {
+    @content;
+  }
+}

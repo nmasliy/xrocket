@@ -1,0 +1,159 @@
+.faq {
+  padding: 48px 0 100px;
+
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    margin: 0 auto;
+    max-width: 880px;
+  }
+
+  &__item {
+    @include mb(24px);
+
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--background-default-primary);
+
+    &.is-active {
+      .faq__content {
+        padding-bottom: 24px;
+      }
+
+      .faq__icon {
+        &::before {
+          rotate: -90deg;
+        }
+
+        &::after {
+          rotate: 270deg;
+        }
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__head-text {
+    font-family: $second-family;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--label-colors-default-primary);
+  }
+
+  &__icon {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 10px;
+      width: 2px;
+      height: 24px;
+      background-color: var(--icon-colors-default-accent);
+      transform: translate(-50%, -50%);
+      transform-origin: top left;
+      transition: rotate $transition;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%);
+      rotate: 90deg;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: 0 24px;
+    max-height: 0;
+    box-sizing: content-box;
+    font-size: 18px;
+    transition: $transition;
+    will-change: max-height;
+  }
+}
+
+@media (max-width: 1280px) {
+  .faq__title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 984px) {
+  .faq {
+    &__title {
+      font-size: 44px;
+    }
+
+    &__list {
+      max-width: 776px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq__title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq {
+    &__content {
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 44px;
+    }
+
+    &__head-text {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .faq {
+    &__head {
+      padding: 24px 16px;
+    }
+
+    &__head-text {
+      font-size: 16px;
+    }
+
+    &__content {
+      padding: 0 16px;
+      font-size: 15px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

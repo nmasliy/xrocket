@@ -1,0 +1,53 @@
+.form-control {
+  display: block;
+  outline: none;
+  border: 1px solid #7e98ab;
+  border-radius: 10px;
+  padding: 18px 26px;
+  width: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 101, 219, 8%);
+  font-family: $font-family;
+  font-size: 16px;
+  color: $c_3;
+  background-color: transparent;
+  transition: border $transition;
+  resize: none;
+
+  &::placeholder {
+    color: $c_3;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $c_9;
+  }
+
+  &.is-disabled {
+    color: rgba($c_3, 0.5);
+  }
+
+  &.is-invalid {
+    border: 1px solid $c_5;
+  }
+
+  &.is-valid {
+    border-color: $c_5;
+  }
+}
+
+.form-watcher {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.form-error {
+  margin-top: 12px;
+  font-weight: 500;
+  color: rgb(175, 42, 42);
+}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,regular,500, italic,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:500,600,700,800,900" rel="stylesheet" />
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="light-theme bg-primary">
+  <div class="page-wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__left">
+            <button class="header__burger burger" aria-label="Открыть меню"><span></span></button>
+            <a class="header__logo" href="./">
+              <img src="img/logo.svg" width="40" height="40" alt="Логотип" />
+            </a>
+          </div>
+          <div class="header__menu menu">
+            <button class="menu__close is-active burger" aria-label="Закрыть меню"><span></span></button>
+            <div class="menu__logo">
+              <img src="img/logo.svg" width="48" height="48" alt="Логотип" />
+            </div>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="#possibilities">Возможности</a></li>
+                <li class="header__item"><a class="header__link" href="#buy">Преимущества</a></li>
+                <li class="header__item"><a class="header__link" href="#nft">NFT</a></li>
+                <li class="header__item"><a class="header__link" href="#start">Rocket API</a></li>
+                <li class="header__item header-submenu">
+                  <a class="header__link header-submenu__trigger" href="#">Еще</a>
+                  <div class="header-submenu__content">
+                    <ul class="header-submenu__list">
+                      <li class="header-submenu__item">
+                        <a class="header-submenu__link" href="/fees.html">Торговые комиссии</a>
+                      </li>
+                      <li class="header-submenu__item">
+                        <a class="header-submenu__link" href="/pairs.html">Торговые пары</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <ul class="menu__box-items">
+              <li class="menu__link-box-item link-box-item">
+                <div class="link-box-item__logo">
+                  <img src="img/logo.svg" width="49" height="49" alt="Логотип xRocket" />
+                </div>
+                <a class="link-box-item__info" href="https://t.me/xRocket" target="_blank">
+                  <p class="link-box-item__title">xRocket Bot</p>
+                  <p class="link-box-item__subtitle">@xRocket</p>
+                </a>
+                <svg class="link-box-item__arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 1.5L7.5 7.5L1.5 13.5" stroke="#BFCBD8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+              <li class="menu__link-box-item link-box-item">
+                <div class="link-box-item__logo">
+                  <img src="img/logo-news.svg" width="49" height="49" alt="Логотип xRocketNews" />
+                </div>
+                <a class="link-box-item__info" href="https://t.me/xRocketNews" target="_blank">
+                  <p class="link-box-item__title">xRocket News</p>
+                  <p class="link-box-item__subtitle">@xRocketNews</p>
+                </a>
+                <svg class="link-box-item__arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 1.5L7.5 7.5L1.5 13.5" stroke="#BFCBD8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="header__right">
+            <div class="header__languages header-languages">
+              <div class="header-languages__current">
+                <svg class="header-languages__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8C2 8.78793 2.15519 9.56815 2.45672 10.2961C2.75825 11.0241 3.20021 11.6855 3.75736 12.2426C4.31451 12.7998 4.97595 13.2417 5.7039 13.5433C6.43185 13.8448 7.21207 14 8 14C8.78793 14 9.56815 13.8448 10.2961 13.5433C11.0241 13.2417 11.6855 12.7998 12.2426 12.2426C12.7998 11.6855 13.2417 11.0241 13.5433 10.2961C13.8448 9.56815 14 8.78793 14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.4087 2 4.88258 2.63214 3.75736 3.75736C2.63214 4.88258 2 6.4087 2 8Z" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2.40002 6H13.6" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2.40002 10H13.6" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M7.66665 2C6.54354 3.79974 5.94812 5.87858 5.94812 8C5.94812 10.1214 6.54354 12.2003 7.66665 14" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8.33331 2C9.45642 3.79974 10.0518 5.87858 10.0518 8C10.0518 10.1214 9.45642 12.2003 8.33331 14" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="header-languages__current-text">Рус</span>
+              </div>
+              <div class="header-languages__content">
+                <ul class="header-languages__list">
+                  <li class="header-languages__item"><a class="header-languages__btn" data-label="Eng" href="#">English</a>
+                  </li>
+                  <li class="header-languages__item"><a class="header-languages__btn" data-label="Рус" href="#">Русский</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="header-theme" title="Сменить тему сайта" aria-label="Сменить тему сайта">
+              <div class="header-theme__icons">
+                <svg class="header-theme__icon header-theme__icon--light" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_45_891)">
+                    <path d="M5 8C5 8.79565 5.31607 9.55871 5.87868 10.1213C6.44129 10.6839 7.20435 11 8 11C8.79565 11 9.55871 10.6839 10.1213 10.1213C10.6839 9.55871 11 8.79565 11 8C11 7.20435 10.6839 6.44129 10.1213 5.87868C9.55871 5.31607 8.79565 5 8 5C7.20435 5 6.44129 5.31607 5.87868 5.87868C5.31607 6.44129 5 7.20435 5 8Z" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1 8H1.77778M8 1V1.77778M14.2222 8H15M8 14.2222V15M3.02222 3.02222L3.56667 3.56667M12.9778 3.02222L12.4333 3.56667M12.4333 12.4333L12.9778 12.9778M3.56667 12.4333L3.02222 12.9778" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_45_891">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <svg class="header-theme__icon header-theme__icon--dark" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.00002 1.99947C8.08802 1.99947 8.17535 1.99947 8.26202 1.99947C7.40558 2.79528 6.85508 3.86604 6.70621 5.02562C6.55734 6.18521 6.81952 7.36029 7.44717 8.34663C8.07483 9.33296 9.02826 10.0682 10.1418 10.4245C11.2552 10.7807 12.4584 10.7356 13.542 10.2968C13.1252 11.2998 12.4439 12.1708 11.5708 12.817C10.6977 13.4631 9.66565 13.8602 8.58462 13.9657C7.5036 14.0713 6.41419 13.8814 5.43261 13.4164C4.45103 12.9514 3.61409 12.2286 3.01108 11.3252C2.40806 10.4218 2.06158 9.37166 2.00861 8.28679C1.95563 7.20191 2.19814 6.123 2.71026 5.16515C3.22239 4.20729 3.98492 3.40642 4.91653 2.84796C5.84813 2.2895 6.91385 1.9944 8.00002 1.99414V1.99947Z" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M11.3333 2.66602C11.3333 3.01964 11.4738 3.35878 11.7239 3.60882C11.9739 3.85887 12.313 3.99935 12.6667 3.99935C12.313 3.99935 11.9739 4.13982 11.7239 4.38987C11.4738 4.63992 11.3333 4.97906 11.3333 5.33268C11.3333 4.97906 11.1929 4.63992 10.9428 4.38987C10.6928 4.13982 10.3536 3.99935 10 3.99935C10.3536 3.99935 10.6928 3.85887 10.9428 3.60882C11.1929 3.35878 11.3333 3.01964 11.3333 2.66602Z" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.6666 7.33268H14M13.3333 6.66602V7.99935" stroke="#1B1B1B" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-overlay"></div>
+
+    <main class="main">
+
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h1 class="hero__title title"><span class="text-light">Универсальный</span> <span
+            class="text-accent">телеграм-бот</span> для&nbsp;работы с криптовалютой</h1>
+              <div class="hero__text">
+                <p>Покупайте, храните, отправляйте и обменивайте криптовалюту, создавайте чеки, счета и принимайте платежи
+                  в&nbsp;своем сервисе с помощью Rocket Pay API</p>
+              </div>
+              <a class="hero__btn btn" href="#" target="_blank">Открыть xRocket</a>
+            </div>
+            <div class="hero__media">
+              <canvas id="hero-canvas" width="576" height="640"></canvas>
+              <script type="module">
+                import {
+                  Application
+                } from './runtime.js';
+                const canvas = document.getElementById('hero-canvas');
+                const app = new Application(canvas);
+                app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode');
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="possibilities section" id="possibilities">
+        <div class="container">
+          <div class="possibilities__inner">
+            <h2 class="possibilities__title title">Возможности</h2>
+            <div class="possibilities__slider">
+              <ul class="possibilities__nav">
+                <li class="possibilities__tab is-active">Трейдинг</li>
+                <li class="possibilities__tab">Чеки</li>
+                <li class="possibilities__tab">Счета</li>
+                <li class="possibilities__tab">Подписки</li>
+                <li class="possibilities__tab">Отправка</li>
+                <li class="possibilities__tab">Хранение</li>
+                <li class="possibilities__tab">Покупка</li>
+              </ul>
+              <div class="possibilities__slider-body">
+                <div class="possibilities__main splide">
+                  <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.6667 28L25.6667 42" stroke="#BFCBD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.6667 28L25.6667 14" stroke="#BFCBD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.3333 42L44.3333 28" stroke="#BFCBD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M30.3333 14L44.3333 28" stroke="#BFCBD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-1.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-2.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-3.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-4.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-5.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-6.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__img">
+                          <img src="img/possibilities-7.png" width="326" height="432" alt="демонстрация xRocket на смартфоне" />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="possibilities__info splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle">Успешный трейдинг с xRocket</p>
+                          <p class="possibilities__text">
+                            Наслаждайтесь легким процессом трейдинга и превращайте
+                            ваши торговые идеи в выгоды с помощью экрана спотовой торговли.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle">Расширяйте свою аудиторию</p>
+                          <p class="possibilities__text">
+                            Чеки позволяют отправлять криптовалюту любым телеграм пользователям.
+                            Используйте рокет-чеки для раздачи криптовалют в своих каналах,
+                            чтобы привлечь больше новых подписчиков.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle">Получайте оплаты с помощью счетов</p>
+                          <p class="possibilities__text">
+                            Создавайте одноразовые или многоразовые криптовалютные счета,
+                            отправляйте их своим телеграм контактам и получайте мгновенные оплаты.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle">Монетизируйте ваш контент</p>
+                          <p class="possibilities__text">
+                            Cоздавайте платные подписки на Ваши приватные каналы или группы.
+                            xRocket будет обрабатывать платежи и управлять доступом, позволяя Вам
+                            сосредоточиться на создании качественного контента.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle"> Выводите на любые кошельки</p>
+                          <p class="possibilities__text">
+                            Выводите криптовалюты на любые сторонние кошельки и отправляйте
+                            ее своим контактам в Telegram, быстро, удобно и безопасно.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle"> Храните безопасно</p>
+                          <p class="possibilities__text">
+                            xRocket обеспечивает надежное хранение криптовалюты
+                            и поддерживает множество сетей и токенов - от биткойна до TON Jettons
+                          </p>
+                        </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="possibilities__item">
+                          <p class="possibilities__item-title subtitle">Покупайте через банковскую карту </p>
+                          <p class="possibilities__text">
+                            Приобретайте криптовалюту напрямую с карты,
+                            выбирайте лучшие предложения на P2P маркете, взаимодействуйте напрямую с продавцами
+                            и покупателями, не беспокоясь о безопасности своих средств
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="possibilities__btn-wrapper">
+              <a class="possibilities__btn btn" href="#" target="_blank">Открыть xRocket</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="benefits section" id="benefits">
+        <div class="container">
+          <div class="benefits__inner">
+            <h2 class="benefits__title title">Преимущества</h2>
+            <p class="benefits__text">Вот некоторые из основных функций xRocket, которые отличают его от других сервисов и
+              делают его удобным для пользователя</p>
+            <ul class="benefits__rows">
+              <li class="benefits__row">
+                <div class="benefits__img">
+                  <img src="img/benefits-1.png" width="520" height="552" alt="Преимущество" />
+                </div>
+                <div class="benefits__info">
+                  <p class="benefits__subtitle subtitle">Безопасность и анонимность
+                    для&nbsp;всех трейдеров</p>
+                  <ul class="benefits__list">
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.4546 10.1822C11.4546 10.8573 11.7228 11.5047 12.2001 11.9821C12.6775 12.4594 13.3249 12.7276 14 12.7276C14.6751 12.7276 15.3226 12.4594 15.8 11.9821C16.2773 11.5047 16.5455 10.8573 16.5455 10.1822C16.5455 9.50708 16.2773 8.85963 15.8 8.38226C15.3226 7.9049 14.6751 7.63672 14 7.63672C13.3249 7.63672 12.6775 7.9049 12.2001 8.38226C11.7228 8.85963 11.4546 9.50708 11.4546 10.1822Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.81818 8.90915V6.36369C3.81818 5.6886 4.08636 5.04115 4.56372 4.56378C5.04109 4.08642 5.68853 3.81824 6.36363 3.81824H8.90909" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.81818 19.0918V21.6373C3.81818 22.3123 4.08636 22.9598 4.56372 23.4372C5.04109 23.9145 5.68853 24.1827 6.36363 24.1827H8.90909" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M19.0909 3.81824H21.6363C22.3114 3.81824 22.9589 4.08642 23.4362 4.56378C23.9136 5.04115 24.1818 5.6886 24.1818 6.36369V8.90915" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M19.0909 24.1827H21.6364C22.3115 24.1827 22.9589 23.9145 23.4363 23.4372C23.9137 22.9598 24.1819 22.3123 24.1819 21.6373V19.0918" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M8.90909 19.0904C8.90909 18.4153 9.17727 17.7678 9.65463 17.2905C10.132 16.8131 10.7794 16.5449 11.4545 16.5449H16.5455C17.2205 16.5449 17.868 16.8131 18.3454 17.2905C18.8227 17.7678 19.0909 18.4153 19.0909 19.0904" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Без KYC</p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Торгуйте без необходимости предоставлять личные данные
+                        и проходить процедуру верификации.
+                      </p>
+                    </li>
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 15.166C14.9283 15.166 15.8185 14.7973 16.4749 14.1409C17.1313 13.4845 17.5 12.5943 17.5 11.666C17.5 10.7378 17.1313 9.84752 16.4749 9.19114C15.8185 8.53476 14.9283 8.16602 14 8.16602C13.0717 8.16602 12.1815 8.53476 11.5251 9.19114C10.8687 9.84752 10.5 10.7378 10.5 11.666C10.5 12.5943 10.8687 13.4845 11.5251 14.1409C12.1815 14.7973 13.0717 15.166 14 15.166Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M24.5 14C24.5 5.6 22.4 3.5 14 3.5C5.6 3.5 3.5 5.6 3.5 14C3.5 22.4 5.6 24.5 14 24.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M7 23.391V23.3327C7 22.095 7.49167 20.908 8.36683 20.0329C9.242 19.1577 10.429 18.666 11.6667 18.666H16.3333" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M25.6667 25.6673L19.8334 19.834" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M19.8334 25.6673L25.6667 19.834" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Без регистрации </p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Перейдите к осуществлению сделок сразу
+                        после посещения платформы.
+                      </p>
+                    </li>
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.865 7.18552L14.567 4.48352C14.8787 4.17179 15.2487 3.9245 15.656 3.75579C16.0632 3.58708 16.4997 3.50024 16.9406 3.50024C17.3814 3.50024 17.8179 3.58708 18.2252 3.75579C18.6324 3.9245 19.0025 4.17179 19.3142 4.48352L23.5165 8.68585C23.8282 8.99754 24.0755 9.36758 24.2442 9.77484C24.4129 10.1821 24.4998 10.6186 24.4998 11.0594C24.4998 11.5003 24.4129 11.9368 24.2442 12.344C24.0755 12.7513 23.8282 13.1213 23.5165 13.433L20.7982 16.1514" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M17.4195 17.4384C16.7623 17.3118 16.1583 16.9907 15.6858 16.5168L15.3347 16.1644L7.68367 23.8154C7.29601 24.203 6.78425 24.4418 6.23817 24.4898L6.034 24.4991H4.66667C4.38091 24.4991 4.10511 24.3941 3.89157 24.2043C3.67803 24.0144 3.5416 23.7527 3.50817 23.4689L3.5 23.3324V21.9651C3.50013 21.4173 3.69301 20.887 4.04483 20.4671L4.18367 20.3154L4.66667 19.8324H7V17.4991H9.33333V15.1658L11.8347 12.6644L11.4835 12.3133C11.0041 11.8357 10.6811 11.2238 10.5572 10.5586" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M17.5 10.5H17.5117" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.5 3.5L24.5 24.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Без паролей </p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Ваш телеграм аккаунт, - это все что нужно для доступа
+                        к своему торговому аккаунту.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="benefits__row">
+                <div class="benefits__img">
+                  <img src="img/benefits-2.png" width="520" height="552" alt="Преимущество" />
+                </div>
+                <div class="benefits__info">
+                  <p class="benefits__subtitle subtitle">Привычный функционал
+                    и&nbsp;интерфейс биржи</p>
+                  <ul class="benefits__list">
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.5 25H24.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.5 8.66667V9.83333C3.5 10.7616 3.86875 11.6518 4.52513 12.3082C5.1815 12.9646 6.07174 13.3333 7 13.3333C7.92826 13.3333 8.8185 12.9646 9.47487 12.3082C10.1313 11.6518 10.5 10.7616 10.5 9.83333M3.5 8.66667H24.5M3.5 8.66667L5.83333 4H22.1667L24.5 8.66667M10.5 9.83333V8.66667M10.5 9.83333C10.5 10.7616 10.8687 11.6518 11.5251 12.3082C12.1815 12.9646 13.0717 13.3333 14 13.3333C14.9283 13.3333 15.8185 12.9646 16.4749 12.3082C17.1313 11.6518 17.5 10.7616 17.5 9.83333M17.5 9.83333V8.66667M17.5 9.83333C17.5 10.7616 17.8687 11.6518 18.5251 12.3082C19.1815 12.9646 20.0717 13.3333 21 13.3333C21.9283 13.3333 22.8185 12.9646 23.4749 12.3082C24.1313 11.6518 24.5 10.7616 24.5 9.83333V8.66667" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M5.83334 25.0001V13.1584" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M22.1667 25.0001V13.1584" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M10.5 25V20.3333C10.5 19.7145 10.7458 19.121 11.1834 18.6834C11.621 18.2458 12.2145 18 12.8333 18H15.1667C15.7855 18 16.379 18.2458 16.8166 18.6834C17.2542 19.121 17.5 19.7145 17.5 20.3333V25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Рыночные ордера</p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Мгновенное исполнение сделок по текущим рыночным ценам, обеспечивая максимальную скорость в торговле.
+                      </p>
+                    </li>
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.6667 23.8333C11.6667 24.4522 11.9125 25.0457 12.3501 25.4832C12.7877 25.9208 13.3812 26.1667 14 26.1667C14.6188 26.1667 15.2123 25.9208 15.6499 25.4832C16.0875 25.0457 16.3333 24.4522 16.3333 23.8333C16.3333 23.2145 16.0875 22.621 15.6499 22.1834C15.2123 21.7458 14.6188 21.5 14 21.5C13.3812 21.5 12.7877 21.7458 12.3501 22.1834C11.9125 22.621 11.6667 23.2145 11.6667 23.8333Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M11.6667 23.834H4.66669" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M16.3333 23.834H23.3333" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M14 18L11.6667 15.6667H8.16667C7.85725 15.6667 7.5605 15.5437 7.34171 15.325C7.12292 15.1062 7 14.8094 7 14.5V5.16667C7 4.85725 7.12292 4.5605 7.34171 4.34171C7.5605 4.12292 7.85725 4 8.16667 4H19.8333C20.1428 4 20.4395 4.12292 20.6583 4.34171C20.8771 4.5605 21 4.85725 21 5.16667V14.5C21 14.8094 20.8771 15.1062 20.6583 15.325C20.4395 15.5437 20.1428 15.6667 19.8333 15.6667H16.3333L14 18Z" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Лимитные ордера</p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Торгуйте используя лимитные ордера для установки конкретных цен покупки или продажи, чтобы достичь
+                        наилучшей сделки.
+                      </p>
+                    </li>
+                    <li class="benefits__item">
+                      <div class="benefits__item-head">
+                        <svg class="benefits__icon" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.5 4V25H24.5" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M23.3333 21.5V25" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M18.6667 19.166V24.9993" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M14 15.666V24.9993" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M9.33334 19.166V24.9993" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M3.5 13.3333C10.5 13.3333 9.33333 7.5 14 7.5C18.6667 7.5 17.5 13.3333 24.5 13.3333" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="benefits__name">Торговый график</p>
+                      </div>
+                      <p class="benefits__item-text">
+                        Графическое отображение ценовой динамики торговых пар, для проведения технического анализа и принятия
+                        прибыльных торговых решений.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="buy section" id="buy">
+        <div class="buy__wrapper">
+          <div class="container">
+            <div class="buy__inner">
+              <div class="buy__content">
+                <h3 class="buy__title subtitle">Покупайте, торгуйте и обменивайте</h3>
+                <p class="buy__text">
+                  Управляйте своими криптовалютами в одном месте с помощью @xRocket
+                </p>
+                <a class="buy__btn btn" href="#" target="_blank">Открыть xRocket</a>
+              </div>
+              <div class="buy__img">
+                <img src="img/buy-1.png" width="360" height="296" alt="Открыть xRocket" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="nft section" id="nft">
+        <div class="container">
+          <div class="nft__inner">
+            <h3 class="nft__title title">NFT Rocket Cosmonauts</h3>
+            <p class="nft__subtitle">Коллекция NFT космонавтов предоставляет ряд преимуществ держателям</p>
+            <div class="nft__row">
+              <div class="nft__img">
+                <img src="img/nft-1.jpg" width="368" height="552" alt="NFT изображение" />
+              </div>
+              <div class="nft__content">
+                <div class="nft__content-info">
+                  <h4 class="nft__content-title title">1001 NFT</h4>
+                  <ul class="nft__tabs">
+                    <li class="nft__tab"><button class="nft__tab-btn is-active" data-tab="1">1 уровень</button></li>
+                    <li class="nft__tab"><button class="nft__tab-btn" data-tab="2">2 уровень</button></li>
+                    <li class="nft__tab"><button class="nft__tab-btn" data-tab="3">3 уровень</button></li>
+                  </ul>
+                  <div class="nft__tabs-content">
+                    <div class="nft__content-item is-active" data-tab="1">
+                      <ul class="nft__list">
+                        <li>Скидка 20% на комиссии</li>
+                        <li>3% реферальный бонус</li>
+                        <li>0% комиссии для разработчиков
+                          за транзакции жетонов через API.</li>
+                      </ul>
+                      <div class="nft__text">
+                        <p>Все владельцы NFT получают бонусы в виде жетонов, которые могут быть размещены в @xRocket и имеют
+                          право
+                          голоса при принятии окончательного решения о их листинге.</p>
+                      </div>
+                      <a class="nft__btn btn" href="#" target="_blank">Купить NFT</a>
+                    </div>
+                    <div class="nft__content-item" data-tab="2">
+                      <ul class="nft__list">
+                        <li>Скидка 25% на комиссии</li>
+                        <li>4% реферальный бонус</li>
+                        <li>0% комиссии для разработчиков
+                          за транзакции жетонов через API.</li>
+                      </ul>
+                      <div class="nft__text">
+                        <p>Все владельцы NFT получают бонусы в виде жетонов, которые могут быть размещены в @xRocket и имеют
+                          право
+                          голоса при принятии окончательного решения о их листинге.</p>
+                      </div>
+                      <a class="nft__btn btn" href="#" target="_blank">Купить NFT</a>
+                    </div>
+                    <div class="nft__content-item" data-tab="3">
+                      <ul class="nft__list">
+                        <li>Скидка 30% на комиссии</li>
+                        <li>6% реферальный бонус</li>
+                        <li>0% комиссии для разработчиков
+                          за транзакции жетонов через API.</li>
+                      </ul>
+                      <div class="nft__text">
+                        <p>Все владельцы NFT получают бонусы в виде жетонов, которые могут быть размещены в @xRocket и имеют
+                          право
+                          голоса при принятии окончательного решения о их листинге.</p>
+                      </div>
+                      <a class="nft__btn btn" href="#" target="_blank">Купить NFT</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="nft__line">
+                  <div class="nft__line-item">
+                    <div class="nft__line-img">
+                      <img src="img/nft-2.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-1.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-3.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-2.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-1.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-3.jpg" width="148" height="209" alt="" />
+                    </div>
+                  </div>
+                  <div class="nft__line-item">
+                    <div class="nft__line-img">
+                      <img src="img/nft-2.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-1.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-3.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-2.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-1.jpg" width="148" height="209" alt="" />
+                    </div>
+                    <div class="nft__line-img">
+                      <img src="img/nft-3.jpg" width="148" height="209" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tokens section" id="tokens">
+        <div class="container">
+          <div class="tokens__inner">
+            <h3 class="tokens__title title">Все ваши любимые сети</h3>
+            <p class="tokens__text">Мы понимаем, что ваш портфель уникален, именно поэтому мы предлагаем широкий выбор монет и
+              жетонов для торговли в нашем телеграм-боте</p>
+            <ul class="tokens__list">
+              <li class="tokens__item"> <img src="img/tokens-1.png" width="64" height="64" alt="Bitcoin" /></li>
+              <li class="tokens__item"> <img src="img/tokens-2.png" width="64" height="64" alt="Ethereum" /></li>
+              <li class="tokens__item"> <img src="img/tokens-3.png" width="64" height="64" alt="TRON" /></li>
+              <li class="tokens__item"> <img src="img/tokens-4.png" width="64" height="64" alt="TON" /></li>
+              <li class="tokens__item"> <img src="img/tokens-5.png" width="64" height="64" alt="Binance" /></li>
+              <li class="tokens__item"> <img src="img/tokens-6.png" width="64" height="64" alt="USDT" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="start section" id="start">
+        <div class="container">
+          <div class="start__inner">
+            <div class="start__logo">
+              <img src="img/logo.svg" width="80" height="80" alt="xRocket logo" />
+            </div>
+            <div class="start__info">
+              <h3 class="start__title subtitle">Готовы приступить?</h3>
+              <p class="start__text">
+                Мы верим в мир, где каждый может совершать транзакции легко
+                и безопасно, используя потенциал криптовалюты.
+              </p>
+            </div>
+            <div class="start__buttons">
+              <a class="start__btn btn" href="#" target="_blank">Открыть xRocket</a>
+              <a class="start__btn btn-transparent" href="#" target="_blank">Документация API</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="link-box" id="links">
+        <div class="container">
+          <div class="link-box__inner">
+            <ul class="link-box__list">
+              <li class="link-box__item link-box-item">
+                <div class="link-box-item__logo">
+                  <img src="img/logo.svg" width="48" height="48" alt="Логотип xRocket" />
+                </div>
+                <a class="link-box-item__info" href="https://t.me/xRocket" target="_blank">
+                  <p class="link-box-item__title">xRocket Bot</p>
+                  <p class="link-box-item__subtitle">@xRocket</p>
+                </a>
+                <svg class="link-box-item__arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 1.5L7.5 7.5L1.5 13.5" stroke="#BFCBD8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+              <li class="link-box__item link-box-item">
+                <div class="link-box-item__logo">
+                  <img src="img/logo-news.svg" width="48" height="48" alt="Логотип xRocketNews" />
+                </div>
+                <a class="link-box-item__info" href="https://t.me/xRocketNews" target="_blank">
+                  <p class="link-box-item__title">xRocket News</p>
+                  <p class="link-box-item__subtitle">@xRocketNews</p>
+                </a>
+                <svg class="link-box-item__arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 1.5L7.5 7.5L1.5 13.5" stroke="#BFCBD8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a class="footer__logo" href="./">
+            <img src="img/logo.svg" width="36" height="36" alt="Логотип" />
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank">API</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank">Terms of services</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/splide.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

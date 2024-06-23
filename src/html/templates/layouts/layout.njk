@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% block head %}
+{% include "../base/head.njk" %}
+{% endblock %}
+
+<body class="light-theme {{bg}}">
+  <div class="page-wrapper">
+    {% block header %}
+    {% include "../base/header.njk" %}
+    {% endblock header %}
+    <main class="main">
+      {% block content %}{% endblock content %}
+    </main>
+    {% block footer %}
+    {% include "../base/footer.njk" %}
+    {% endblock footer %}
+  </div>
+  {# {% include "../base/modals.njk" %} #}
+  {% block scripts %}
+  {% include "../base/scripts.njk" %}
+  {% endblock %}
+</body>
+
+</html>

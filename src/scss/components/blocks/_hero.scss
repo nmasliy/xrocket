@@ -1,0 +1,77 @@
+/* stylelint-disable declaration-no-important */
+.hero {
+  padding: 24px 0;
+
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 630fr 576fr;
+    gap: 12px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  &__text {
+    margin-bottom: 36px;
+    padding-right: 24px;
+    font-size: 20px;
+  }
+
+  &__media {
+    @include aspect-ratio(576px, 640px);
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 984px) {
+  .hero {
+    &__inner {
+      grid-template-columns: 546fr 368fr;
+    }
+
+    &__title {
+      max-width: 440px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &__text {
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    &__inner {
+      display: block;
+    }
+
+    &__title {
+      margin-bottom: 36px;
+    }
+
+    &__text {
+      margin-bottom: 36px;
+      font-size: 18px;
+    }
+  }
+}

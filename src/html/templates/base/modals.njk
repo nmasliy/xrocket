@@ -1,0 +1,26 @@
+<div class="modal modal-consult" id="modal-consult" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner" style="background-image: url('img/modal-1.png');">
+      <div class="modal__content">
+        <p class="modal__title title">Получить консультацию</p>
+        <div class="modal__form">
+          <form class="form-ajax">
+            <div class="modal__form-body">
+              <input class="form-request-from" type="hidden" name="Форма" value="Попап Получить консультацию" />
+              <input class="modal__input form-control" name="Имя" required placeholder="Имя" type="text" />
+              <input class="modal__input form-control phone-input" name="Телефон" placeholder="Телефон" type="tel"
+                required />
+              <input class="modal__input form-control" name="Почта" placeholder="E-mail" type="email" required />
+              <button class="modal__btn btn-primary">Получить консультацию</button>
+              <p class="modal__form-text">Отправляя запрос выражаю <a href="#">согласие</a> на обработку моих
+                персональных данных в соответствии с&nbsp;<a href="#">Политикой</a> обработки
+                персональных данных</p>
+            </div>
+            <input class="form-watcher" type="text" name="watcher" />
+          </form>
+        </div>
+        <button class="modal__close btn-close" data-modal-close aria-label="Закрыть" title="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+</div>

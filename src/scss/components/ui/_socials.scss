@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  li {
+    @include mr(15px);
+  }
+
+  a {
+    @include bg-cover;
+
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: transform $transition;
+
+    @include hover {
+      transform: scale(1.08);
+    }
+  }
+}

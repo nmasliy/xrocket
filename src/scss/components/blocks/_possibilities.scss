@@ -1,0 +1,152 @@
+.possibilities {
+  background: var(--background-default-primary);
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  &__tab {
+    position: relative;
+    flex-shrink: 0;
+    padding: 16px 12px 12px;
+    width: 120px;
+    transition: color $transition;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      border-radius: 2px;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-primary);
+      transform: translateX(-50%);
+      transition: width $transition;
+    }
+
+    &.is-active {
+      color: var(--label-colors-default-primary);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include hover {
+      color: var(--accent-primary);
+    }
+  }
+
+  &__slider-body {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  &__slider {
+    text-align: center;
+  }
+
+  &__main {
+    margin-bottom: 24px;
+    padding: 0 112px;
+
+    .splide {
+      &__arrow {
+        @include top-50;
+
+        position: absolute;
+
+        path {
+          stroke: var(--icon-colors-default-secondary);
+          transition: stroke $transition;
+        }
+
+        @include hover {
+          path {
+            stroke: var(--accent-primary);
+          }
+        }
+      }
+
+      &__pagination {
+        padding: 16px 0;
+      }
+
+      &__pagination__page {
+        margin: 0 4px;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: var(--background-default-tertiary);
+        transition: background-color $transition;
+
+        &.is-active {
+          background-color: var(--accent-primary);
+        }
+      }
+
+      &__arrow--prev {
+        left: 0;
+      }
+
+      &__arrow--next {
+        right: 0;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 24px;
+  }
+
+  &__btn-wrapper {
+    text-align: center;
+  }
+
+  &__img {
+    margin: 0 auto;
+    max-width: 326px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 840px) {
+  .possibilities {
+    &__nav {
+      justify-content: flex-start;
+      overflow: auto;
+      margin: 0 calc(var(--container-offset) * -1) 20px;
+      padding: 0 var(--container-offset);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .possibilities {
+    .splide {
+      &__arrow svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}

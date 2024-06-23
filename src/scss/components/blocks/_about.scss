@@ -1,0 +1,158 @@
+.about {
+  padding: 64px 0;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin: 0 auto 55px;
+    max-width: 650px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 48px;
+  }
+
+  &__item {
+    grid-column: span 2;
+    border-radius: 36px;
+    padding: 48px 36px;
+    background: var(--background-default-primary);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      grid-column: span 3;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+
+    path {
+      stroke: var(--icon-colors-default-accent);
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 18px;
+  }
+}
+
+.about-info {
+  text-align: center;
+  color: var(--accent-white);
+  background: linear-gradient(180deg, #5ebef0 0%, #0295fd 100%);
+
+  &__icon {
+    margin: 0 auto 30px;
+
+    path {
+      fill: var(--accent-white);
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .about__title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    &__item {
+      padding: 36px 24px;
+    }
+
+    &__list {
+      gap: 24px;
+    }
+  }
+
+  .about-info {
+    &__btn {
+      padding: 16px 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 984px) {
+  .about__title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 868px) {
+  .about {
+    &__item-text {
+      font-size: 16px;
+    }
+
+    &__item {
+      grid-column: span 3;
+    }
+
+    &__subtitle {
+      margin-bottom: 48px;
+    }
+  }
+
+  .about-info {
+    grid-column: span 6;
+
+    &__text {
+      margin: 0 auto 32px;
+      max-width: 426px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-top: 64px;
+
+    &__title {
+      font-size: 44px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      @include mb(24px);
+    }
+
+    &__title {
+      font-size: 44px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .about__title {
+    font-size: 32px;
+  }
+}

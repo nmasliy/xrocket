@@ -1,0 +1,24 @@
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title title"><span class="text-light">Универсальный</span> <span
+            class="text-accent">телеграм-бот</span> для&nbsp;работы с криптовалютой</h1>
+        <div class="hero__text">
+          <p>Покупайте, храните, отправляйте и обменивайте криптовалюту, создавайте чеки, счета и принимайте платежи
+            в&nbsp;своем сервисе с помощью Rocket Pay API</p>
+        </div>
+        <a class="hero__btn btn" href="#" target="_blank">Открыть xRocket</a>
+      </div>
+      <div class="hero__media">
+        <canvas id="hero-canvas" width="576" height="640"></canvas>
+        <script type="module">
+          import { Application } from './runtime.js';
+          const canvas = document.getElementById('hero-canvas');
+          const app = new Application(canvas);
+          app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode');
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+/* stylelint-disable */
+
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin image-set($pathToImage, $format: 'jpg') {
+  background-image: url('#{$pathToImage}.#{$format}');
+  background-image: image-set(
+    '#{$pathToImage}.webp'type('image/webp'),
+    '#{$pathToImage}.#{$format}'type('image/#{$format}')
+  );
+}

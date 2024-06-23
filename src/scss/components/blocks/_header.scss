@@ -1,0 +1,320 @@
+.header {
+  padding: 12px 0;
+  background-color: var(--background-default-primary);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__nav {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--label-colors-default-primary);
+  }
+
+  &__burger {
+    margin-right: 16px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    transition: color $transition;
+
+    @include hover {
+      color: var(--accent-primary);
+    }
+  }
+
+  &__item {
+    @include mr(40px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--label-colors-default-primary);
+  }
+
+  &__languages {
+    margin-right: 20px;
+  }
+}
+
+.header-theme {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--background-default-secondary);
+  transition: background $transition;
+
+  &__icons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: $transition;
+  }
+
+  &__icon {
+    @include mb(4px);
+
+    path {
+      stroke: var(--icon-colors-default-primary);
+    }
+  }
+
+  @include hover {
+    background-color: var(--background-default-tertiary);
+  }
+}
+
+.header-submenu {
+  position: relative;
+
+  &__trigger {
+    position: relative;
+    display: inline-block;
+    padding-right: 21px;
+
+    &::after {
+      @include top-50;
+
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 17px;
+      height: 16px;
+      background: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6L8.5 10L12.5 6' stroke='%231B1B1B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center / cover no-repeat;
+      transition: $transition;
+    }
+
+    @include hover {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6L8.5 10L12.5 6' stroke='%233F8AE0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__list {
+    border-radius: 12px;
+  }
+}
+
+.header-languages {
+  position: relative;
+  min-width: 70px;
+
+  &__icon {
+    flex-shrink: 0;
+    margin-right: 6px;
+
+    path {
+      stroke: var(--icon-colors-default-primary);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 3;
+    padding-top: 10px;
+    width: max-content;
+    min-width: 100%;
+    max-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: $transition;
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  &__btn {
+    display: block;
+    border-radius: 8px;
+    padding: 12px;
+    transition: background-color $transition;
+
+    &:focus,
+    &:active {
+      background-color: var(--background-default-tertiary);
+    }
+
+    @include hover {
+      background-color: var(--background-default-secondary);
+
+      &:focus,
+      &:active {
+        background-color: var(--background-default-tertiary);
+      }
+    }
+  }
+
+  &__list {
+    border-radius: 12px;
+    padding: 4px;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 10%), 0 1px 3px 0 rgba(0, 0, 0, 10%);
+    background: var(--background-default-primary);
+  }
+
+  &.is-active {
+    .header-languages__content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.dark-theme {
+  .header-theme__icons {
+    transform: translate(-50%, -24px);
+  }
+
+  .header-submenu__trigger::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6L8.5 10L12.5 6' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  }
+}
+
+@media (min-width: 769px) {
+  .header-submenu {
+    &__link {
+      display: block;
+      border-radius: 8px;
+      padding: 12px;
+      transition: background-color $transition;
+
+      &:focus,
+      &:active {
+        background-color: var(--background-default-tertiary);
+      }
+
+      @include hover {
+        background-color: var(--background-default-secondary);
+
+        &:focus,
+        &:active {
+          background-color: var(--background-default-tertiary);
+        }
+      }
+    }
+
+    &__content {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: 3;
+      padding-top: 10px;
+      width: max-content;
+      min-width: 100%;
+      max-width: 320px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: $transition;
+    }
+
+    &__list {
+      padding: 4px;
+      box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 10%), 0 1px 3px 0 rgba(0, 0, 0, 10%);
+      background: var(--background-default-primary);
+    }
+
+    &.is-active {
+      .header-submenu__trigger::after {
+        transform: translateY(-50%) rotate(180deg);
+        transform-origin: center;
+      }
+
+      .header-submenu__content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    @include hover {
+      .header-submenu__content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .header-submenu__trigger::after {
+        transform: translateY(-50%) rotate(180deg);
+        transform-origin: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__item {
+      @include mr(24px);
+    }
+  }
+}
+
+@media (max-width: $menu-breakpoint) {
+  .header {
+    &__list {
+      display: block;
+      margin: 0 -20px;
+      text-align: center;
+    }
+
+    &__item {
+      @include mr(0);
+    }
+
+    &__nav {
+      margin-bottom: 16px;
+    }
+
+    &__link {
+      display: block;
+      padding: 14px 20px;
+    }
+  }
+
+  .header-submenu {
+    &__link {
+      display: block;
+      padding: 14px 20px;
+    }
+
+    &__trigger {
+      display: none;
+    }
+  }
+}
