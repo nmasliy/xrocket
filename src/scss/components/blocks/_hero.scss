@@ -20,6 +20,15 @@
     font-size: 20px;
   }
 
+  &__img {
+    transition: 0.2s;
+
+    &.is-animate {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   &__media {
     @include aspect-ratio(576px, 640px);
 

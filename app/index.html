@@ -143,14 +143,9 @@
             </div>
             <div class="hero__media">
               <canvas id="hero-canvas" width="576" height="640"></canvas>
-              <script type="module">
-                import {
-                  Application
-                } from './runtime.js';
-                const canvas = document.getElementById('hero-canvas');
-                const app = new Application(canvas);
-                app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode');
-              </script>
+              <div class="hero__img">
+                <img src="img/hero-1.png" width="576" height="640" alt="placeholder" />
+              </div>
             </div>
           </div>
         </div>
@@ -661,6 +656,24 @@
   <script src="js/vendor.js"></script>
   <script src="js/splide.min.js"></script>
   <script src="js/main.js"></script>
+
+  <script type="module">
+    import {
+      Application
+    } from './runtime.js';
+    const img = document.querySelector('.hero__img');
+    window.addEventListener('load', function(e) {
+      const canvas = document.getElementById('hero-canvas');
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/swp8gaO46NDXAoNM/scene.splinecode')
+        .then(() => {
+          img.classList.add('is-animate');
+          setTimeout(() => {
+            img.style.display = 'none';
+          }, 200)
+        });
+    })
+  </script>
 
 </body>
 
